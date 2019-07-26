@@ -6,6 +6,7 @@ class CounterButton extends React.Component {
     counter: 0,
   };
 
+
   clickHandler = () => {
     this.setState({
       counter: this.state.counter + 1,
@@ -26,6 +27,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <CounterButton />
+        <CounterButton />
+        <CounterButton />
         <CounterButton />
       </View>
     );
