@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import CityList from './CityList';
-import WeatherDetailScreen from './WeatherDetailScreen';
+import WeatherDetailScreen from './WeatherDetailScreen';6
 
 const AppNavigator = createStackNavigator(
   {
