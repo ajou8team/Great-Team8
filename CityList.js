@@ -1,11 +1,13 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { Constants } from 'expo';
+import WeatherDetailScreen from './WeatherDetailScreen';
 
 export default class CityList extends React.Component {
     static navigationOptions = {
         title: 'Cities',
       };
+
   constructor(props) {
     super(props);
 
