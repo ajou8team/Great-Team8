@@ -3,6 +3,11 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 
 class CounterButton extends React.Component {
 
+   static defaultProps = {
+    counter: -1,
+  };
+
+
   constructor(props) {
     super(props);
 
