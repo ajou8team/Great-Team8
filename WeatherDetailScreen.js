@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View ,Image, ActivityIndicator} from 'react-native';
 import { Constants } from 'expo';
 
 export default class WeatherDetailScreen extends React.Component {
@@ -44,17 +44,59 @@ export default class WeatherDetailScreen extends React.Component {
 
     let celsius = this.state.main.temp - 273.15;
 
+   if(celsius.toFixed(1) <20){
+
+       return (
+         <View style={styles.weatherinfo}>
+           <Text style = {styles.loadingText}>온도: {celsius.toFixed(1)}</Text>
+           <Text style = {styles.loadingText}>춥다</Text>
+           <ActivityIndicator />
+         </View>
+       );
+
+   }
+
+
+
     return (
       <View style={styles.container}>
         <Text>온도: {celsius.toFixed(1)}</Text>
       </View>
     );
+
+
+
+
+    }
   }
-}
+
+  function view_weather(rea){
+
+ var data = res.getElementsByTagName("weather")[0];
+ var now = data.getElementsByTagName("forecast_information")[0];
+  var now1  = now.getElementsByTagName("condition")[0].getArrtibute("data");
+
+  }
+
+
+
+
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
       marginTop: Constants.statusBarHeight,
+
     },
+    loadingText: {
+    fontSize : 50
+
+    },
+    weatherinfo: {
+    flex: 1,
+    backgroundColor: "#FDF6AA",
+    justifyContent: "flex-end",
+    paddingLeft: 25
+    }
   });
