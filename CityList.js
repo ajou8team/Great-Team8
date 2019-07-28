@@ -5,7 +5,15 @@ import WeatherDetailScreen from './WeatherDetailScreen';
 
 export default class CityList extends React.Component {
     static navigationOptions = {
-        title: 'Cities',
+        title: 'team8-weather',
+        headerTitleStyle: {
+            backgroundColor: 'pink',
+            textAlign: 'center',
+            flexGrow:1,
+            alignSelf: 'center',
+            color: 'white',
+
+        },
       };
 
   constructor(props) {
@@ -58,9 +66,9 @@ export default class CityList extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFE6EB',
     marginTop: Constants.statusBarHeight,
-  },
+   },
 
   item: {
     flex: 1,
@@ -68,10 +76,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
     borderWidth: 1,
-    borderColor: 'orange',
+    borderColor: '#FFA2AD',
+    borderWidth: 1,
   },
   text: {
     fontSize: 20,
     textAlign: 'center',
+    color: '#FF88A7',
   }
 });
