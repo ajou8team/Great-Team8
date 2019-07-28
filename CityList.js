@@ -6,6 +6,14 @@ import WeatherDetailScreen from './WeatherDetailScreen';
 export default class CityList extends React.Component {
     static navigationOptions = {
         title: 'Cities',
+        headerTitleStyle: {
+            backgroundColor: 'pink',
+            textAlign: 'center',
+            flexGrow:1,
+            alignSelf: 'center',
+            color: 'white',
+
+        },
       };
 
   constructor(props) {
@@ -58,7 +66,7 @@ export default class CityList extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgb(255,203,193)',
     marginTop: Constants.statusBarHeight,
   },
 
@@ -68,10 +76,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
     borderWidth: 1,
-    borderColor: 'orange',
+    borderColor: '#EDBBCB',
   },
   text: {
     fontSize: 20,
     textAlign: 'center',
+    color: 'rgb(249,125,099)',
   }
 });
