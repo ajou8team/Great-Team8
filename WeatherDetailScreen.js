@@ -24,7 +24,7 @@ export default class WeatherDetailScreen extends React.Component {
     const appid = "4f446d8b882808ef8c36087d9bcbe591";
     //const city = 'Daejeon';
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}`)
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}')
       .then(response => response.json())
       .then(info => {
         this.setState({
